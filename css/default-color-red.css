@@ -1,0 +1,67 @@
+.home .slider .slick-prev,
+.home .slider .slick-next,
+footer p a,
+footer p a:hover,
+.testim .tabbable .tab-content .profile-details h4,
+.serv .serv-vid .play i,
+.about .tabs-about .nav-link.active,
+.navbar .social-media a:hover,
+.navbar .nav-item.active-nav a {
+  color: #e20612; }
+
+.maps .open-map,
+.contact .form .message .send-btn,
+.contact .form .message .send-btn input.btn,
+.contact .form .message .send-btn,
+.work .shuffle ul li.active,
+.serv .serv-vid .play:hover,
+.about .tabs-about .tab-content .tab-pane .skills .progress .progress-bar,
+.about .tabs-about .tab-content .tab-pane .btn-about a,
+.home .title .btn-home a,
+.navbar-toggler .menu .line1,
+.navbar-toggler .menu .line2,
+.navbar-toggler .menu .line3 {
+  background-color: #e20612; }
+
+.testim .tabbable .tab-content .profile-details,
+.work .shuffle ul li.active,
+.work .shuffle ul li {
+  border: 1px solid #e20612; }
+
+.testim .tabbable .tab-content .profile-image .image-tab,
+.testim .tabbable .list-tabs ul .active .image-tab {
+  border: 2px solid #e20612; }
+
+.navbar .nav-item.active-nav {
+  border-bottom: 1px solid #e20612; }
+
+.contact .form .form-group textarea,
+.contact .form .form-group input {
+  border-bottom: 2px solid #e20612; }
+
+.about .tabs-about .nav-link.active {
+  border-top: 2px solid #e20612; }
+
+.home3 .overlay {
+  background-color: rgba(226, 6, 18, 0.9); }
+
+.testim .client .overlay-cl {
+  background-color: rgba(226, 6, 18, 0.7); }
+
+.navbar .logo .bg_logo,
+.serv .content img {
+  filter: hue-rotate(0deg); }
+
+.background-gradient {
+  background: #e20612;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #e20612 0%, #521b1e 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #e20612 0%, #521b1e 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #e20612 0%, #521b1e 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e20612', endColorstr='#521b1e',GradientType=1 );
+  /* IE6-9 */ }
+
+/*# sourceMappingURL=default-color.css.map */
