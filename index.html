@@ -294,7 +294,7 @@
             <div class="row">
                 <div class="col-md-6 col-sm-12">
                     <div class="form">
-                        <form id="my_form" method="post" onsubmit="submitForm(); return false;">
+                        <form id="my_form" method="POST">
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-group">
@@ -384,5 +384,35 @@
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/custom.js"></script>
+        <script src="//script.sheetsu.com/"></script>
     </body>
 </html>
+
+<script>
+
+// Inline script to avoid bandwidth bottleneck on slow connections.
+
+var d = document;
+
+
+function addRecord () {
+    var payload = {
+        name: d.forms[0].name,
+        phone: d.forms[0].phone,
+        email: d.forms[0].email,
+        msg: d.forms[0].msg,
+        subject: d.forms[0].subject
+    };
+
+    Sheetsu.write("https://sheetsu.com/apis/v1.0lw/03b661682065/", payload, {}, function (res) {
+        console.log(res);
+    });
+}
+
+
+d.getElementById("my_form").addEventListener('submit', function (e) {
+    e.preventDefault();
+    addRecord();
+});
+
+</script>
