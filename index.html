@@ -392,7 +392,7 @@
 // Inline script to avoid bandwidth bottleneck on slow connections.
 
 var d = document;
-
+function addRecord(){
 const data =[
     {
         name: d.forms[0].name,
@@ -401,10 +401,8 @@ const data =[
         msg: d.forms[0].msg,
         subject: d.forms[0].subject,
     },
-];
-    
+];   
 // This means 1 new row will be inserted into the Sheet
-
 fetch('https://sheet.best/api/sheets/abbce09b-3b46-4d21-8ddd-5bc8893c87e4', {
   method: 'POST',
   mode: 'cors',
@@ -421,7 +419,9 @@ fetch('https://sheet.best/api/sheets/abbce09b-3b46-4d21-8ddd-5bc8893c87e4', {
   .catch(error => {
     // Errors are reported there
     console.log(error);
-  });    
+  }); 
+    
+}
 /*
 function addRecord () {
     var payload = {
@@ -437,10 +437,10 @@ function addRecord () {
     });
 }
 
-
+*/
 d.getElementById("my_form").addEventListener('submit', function (e) {
     e.preventDefault();
     addRecord();
 });
-*/
+
 </script>
