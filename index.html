@@ -384,8 +384,7 @@
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/custom.js"></script>
-        <script src="//script.sheetsu.com/"></script>
-    </body>
+        <script src="//sheet.best/api/"></script>
 </html>
 
 <script>
@@ -394,7 +393,36 @@
 
 var d = document;
 
+const data =[
+    {
+        name: d.forms[0].name,
+        phone: d.forms[0].phone,
+        email: d.forms[0].email,
+        msg: d.forms[0].msg,
+        subject: d.forms[0].subject,
+    },
+];
+    
+// This means 1 new row will be inserted into the Sheet
 
+fetch('https://sheet.best/api/sheets/abbce09b-3b46-4d21-8ddd-5bc8893c87e4', {
+  method: 'POST',
+  mode: 'cors',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+  .then(r => r.json())
+  .then(data => {
+    // The response comes here
+    console.log(data);
+  })
+  .catch(error => {
+    // Errors are reported there
+    console.log(error);
+  });    
+/*
 function addRecord () {
     var payload = {
         name: d.forms[0].name,
@@ -414,5 +442,5 @@ d.getElementById("my_form").addEventListener('submit', function (e) {
     e.preventDefault();
     addRecord();
 });
-
+*/
 </script>
